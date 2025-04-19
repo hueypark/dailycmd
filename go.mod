@@ -5,6 +5,9 @@ go 1.22.0
 require (
 	github.com/aws/aws-sdk-go-v2/config v1.27.7
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.51.4
+	github.com/redis/go-redis/v9 v9.6.1
+	github.com/rs/zerolog v1.33.0
+	github.com/tidwall/pretty v1.2.1
 )
 
 require (
@@ -24,4 +27,9 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.23.2 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.28.4 // indirect
 	github.com/aws/smithy-go v1.20.1 // indirect
+	github.com/cespare/xxhash/v2 v2.2.0 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.19 // indirect
+	golang.org/x/sys v0.12.0 // indirect
 )
