@@ -26,7 +26,7 @@ func main() {
 		Str("prefix", *prefix).
 		Msg("s3 download directory")
 
-	cfg, err := config.LoadDefaultConfig(context.Background())
+	cfg, err := config.LoadDefaultConfig(context.Background(), config.WithSharedConfigProfile("QE-LEAD-FB"))
 	if err != nil {
 		log.Fatal().
 			Err(err).
@@ -54,7 +54,13 @@ func main() {
 				log.Fatal().
 					Err(err).
 					Msg("unable to download object")
+
+				continue
 			}
+
+			log.Info().
+				Str("objectKey", *obj.Key).
+				Msg("downloaded")
 		}
 
 		objectCnt += len(res.Contents)
